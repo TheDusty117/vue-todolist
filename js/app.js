@@ -7,7 +7,7 @@ const { createApp } = Vue
         tasks : [
           {
             text: 'andare a Khumjung',
-            done: true,
+            done: false,
           },
           {
             text: 'imparare tibetano',
@@ -19,14 +19,24 @@ const { createApp } = Vue
           },
         ],
 
-      
+        // valore dell'input inserito nella pagina, inputValue si trova anche all'interno del tag, pertanto possono comunicare
+        inputValue: '',
+
 
       }
     },
 
     //METODI FUNZIONI
-    methods:{
-      isFalseLine(){}
+    methods: {
+      removeTask(startIndex){
+        this.tasks.splice(startIndex,1)
+      },
+
+      addTask(){
+        const newTask = this.inputValue
+        this.tasks.push(newTask)
+        this.inputValue = ''
+      },
 
 
     }
