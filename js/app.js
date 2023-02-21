@@ -3,7 +3,20 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        tasksArrObjects : [
+          {
+            text: 'andare a Khumjung',
+            done: 'false',
+          },
+          {
+            text: 'imparare tibetano',
+            done: 'false',
+          },
+          {
+            text: 'insegnare agli Sherpa VueJS',
+            done: 'false',
+          },
+        ]
       }
     }
   }).mount('#app')
