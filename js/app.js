@@ -20,7 +20,10 @@ const { createApp } = Vue
         ],
 
         // valore dell'input inserito nella pagina, inputValue si trova anche all'interno del tag, pertanto possono comunicare
-        inputValue: '',
+        inputValue: {
+          text: '',
+          done: false,
+        },
 
 
       }
