@@ -38,6 +38,12 @@ const { createApp } = Vue
         this.inputValue = ''
       },
       
+      // booleanTransformer(){
+      //   this.done = false
+      //   if (this.done === false){
+      //     this.done = true
+      //   }
+      // },
 
 
     }

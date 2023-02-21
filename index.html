@@ -37,7 +37,7 @@
             <li :class="task.done === true ? 'line' : '' " v-for="(task,index) in tasks" class="list-group-item d-flex justify-content-between align-items-center">
               {{ task.text }}
               <span>
-                <i class="fa-solid fa-circle-check"></i>
+                <i @click="task.done === false ? task.done = true : task.done = false " class="fa-solid fa-circle-check"></i>
                 <i @click="removeTask(index)" class="fa-solid fa-circle-xmark"></i>
               </span>
               <!-- al click removetask PASSO il valore (index) che corrisponde all'indice dove avviene l'evento, senza quest'ultima non saprebbe quale nota cancellare-->
