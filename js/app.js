@@ -37,6 +37,7 @@ const { createApp } = Vue
         this.tasks.push({text: newTask , done: false})
         this.inputValue = ''
       },
+      
 
 
     }

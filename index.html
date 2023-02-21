@@ -25,7 +25,7 @@
       <div class="container">
         <div class="row">
           <!-- qui uso il v-model sull'input text, per creare un ponte comunicativo verso il mio file JS, in modo tale da ascoltare l'input prodotto-->
-          <input v-model="inputValue" class="form-control" type="text" placeholder="scrivi una cosa da dover fare!">
+          <input v-model="inputValue" @keyup.enter="addTask()" class="form-control" type="text" placeholder="scrivi una cosa da dover fare!">
           <button @click="addTask()" type="button" class="btn btn-primary">Aggiungi</button>
         
         </div>
@@ -36,7 +36,10 @@
           <ul class="list-group list-group-flush">
             <li :class="task.done === true ? 'line' : '' " v-for="(task,index) in tasks" class="list-group-item d-flex justify-content-between align-items-center">
               {{ task.text }}
-              <i @click="removeTask(index)" class="fa-solid fa-circle-xmark"></i>
+              <span>
+                <i class="fa-solid fa-circle-check"></i>
+                <i @click="removeTask(index)" class="fa-solid fa-circle-xmark"></i>
+              </span>
               <!-- al click removetask PASSO il valore (index) che corrisponde all'indice dove avviene l'evento, senza quest'ultima non saprebbe quale nota cancellare-->
             </li>
           </ul>
