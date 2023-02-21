@@ -20,12 +20,9 @@ const { createApp } = Vue
         ],
 
         // valore dell'input inserito nella pagina, inputValue si trova anche all'interno del tag, pertanto possono comunicare
-        inputValue: {
-          text: '',
-          done: false,
-        },
+        inputValue: '',
 
-
+        
       }
     },
 
@@ -37,7 +34,7 @@ const { createApp } = Vue
 
       addTask(){
         const newTask = this.inputValue
-        this.tasks.push(newTask)
+        this.tasks.push({text: newTask , done: false})
         this.inputValue = ''
       },
 
