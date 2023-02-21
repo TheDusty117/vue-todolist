@@ -24,7 +24,7 @@
       <div class="container">
         <div class="card">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">an item</li>
+            <li :class="task.done === true ? 'line' : '' " v-for="(task,index) in tasks" class="list-group-item">{{ task.text }}</li>
           </ul>
   
         </div>

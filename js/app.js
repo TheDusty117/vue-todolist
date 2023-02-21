@@ -3,20 +3,32 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        tasksArrObjects : [
+        //ARRAY DI OGGETTI
+        tasks : [
           {
             text: 'andare a Khumjung',
-            done: 'false',
+            done: true,
           },
           {
             text: 'imparare tibetano',
-            done: 'false',
+            done: false,
           },
           {
             text: 'insegnare agli Sherpa VueJS',
-            done: 'false',
+            done: false,
           },
-        ]
+        ],
+
+      
+
       }
+    },
+
+    //METODI FUNZIONI
+    methods:{
+      isFalseLine(){}
+
+
     }
+
   }).mount('#app')
