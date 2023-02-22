@@ -33,8 +33,8 @@ const { createApp } = Vue
       },
 
       addTask(){
-        const newTask = this.inputValue
-        this.tasks.push({text: newTask , done: false})
+        const newTask = this.inputValue // grazie a this.inputValue, tramite il v-model riusciamo a prendere il valore inserito nell'input da utente, ci creiamo una const
+        this.tasks.push({text: newTask , done: false}) //indico di pushare il valore inserito in input, dentro array di oggetti tasks, inoltre gli inserisco le sue specifiche nelle {{}}
         this.inputValue = ''
       },
       
